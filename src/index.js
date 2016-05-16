@@ -38,7 +38,7 @@ ReactDOM.render(
 	<Provider store={store}>
 		<PlayerTable />
 	</Provider>,
-	document.querySelector('.react-container')
+	document.querySelector('.player-table-container')
 );
 //
 // ReactDOM.render(
