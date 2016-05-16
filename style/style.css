@@ -1,0 +1,183 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+#intro {
+    background: url(../img/polkas.png) repeat;
+    margin: 0 auto;
+    width: 100%;
+    padding: 20px 0;
+    height:100vh;
+}
+
+.intro-unit {
+    color: #4582ec;
+    text-align: center;
+    text-shadow: -1px 0 #ffffff, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff;
+    vertical-align: middle;
+    width:100%;
+    display: inline-block;
+    height:50%;
+    position: absolute;
+    top: 0;
+    bottom:0%;
+    margin: auto;
+}
+
+#features {
+    background-color: #ffffff;
+    overflow:hidden;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    padding-left: 10px;
+    padding-right:10px;
+}
+
+#empty-ny {
+    background: url(../img/polkas.png) repeat;
+    height: auto;
+    margin: 0 auto;
+    width: 100%;
+    padding: 100px 0;
+    text-align: center;
+}
+
+#about {
+    background-color: #ffffff;
+    height: auto;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+
+body{
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  background: #ffffff !important;
+  color: #b3b3b3 !important;
+  font-family: "Raleway","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.scalable-white-box-shadow{
+  -webkit-box-shadow: inset 0px 0px 85px 85px rgba(255,255,255,1);
+  -moz-box-shadow: inset 0px 0px 85px 85px rgba(255,255,255,1);
+  box-shadow: inset 0px 0px 85px 85px rgba(255,255,255,1);
+}
+
+.name-header{
+  font-size:500%;
+}
+
+.title-header{
+  color:#b3b3b3;
+}
+
+.icon-color > i{
+  color:#d0d0d0;
+  font-size:170%;
+}
+
+.heart-color{
+  color:#ffcece;
+}
+
+.icon-color:hover > i{
+  color:#4582ec;
+}
+
+.heart-color:hover{
+  color:#ff9898;
+}
+
+.based-in-color{
+  color: #d0d0d0;
+}
+
+.features-header{
+  margin-bottom:25px;
+}
+
+@media only screen and (max-width: 1210px) and (min-width: 951px) {
+
+    .scalable-white-box-shadow{
+      -webkit-box-shadow: inset 0px 0px 75px 75px rgba(255,255,255,1);
+      -moz-box-shadow: inset 0px 0px 75px 75px rgba(255,255,255,1);
+      box-shadow: inset 0px 0px 75px 75px rgba(255,255,255,1);
+    }
+
+}
+
+@media only screen and (max-width: 950px) and (min-width: 651px) {
+
+    .scalable-white-box-shadow{
+      -webkit-box-shadow: inset 0px 0px 65px 65px rgba(255,255,255,1);
+      -moz-box-shadow: inset 0px 0px 65px 65px rgba(255,255,255,1);
+      box-shadow: inset 0px 0px 65px 65px rgba(255,255,255,1);
+    }
+
+    .name-header{
+      font-size:400%;
+      margin-top:0px;
+    }
+
+    .title-header{
+      font-size:200%;
+    }
+
+    .based-in{
+      margin-top:5px;
+      font-size:180%;
+    }
+
+    .icon-color > i{
+      font-size:130%;
+    }
+
+    .intro-unit {
+        padding: 30px;
+    }
+
+}
+
+@media only screen and (max-width: 650px) {
+
+  .scalable-white-box-shadow{
+    -webkit-box-shadow: inset 0px 0px 35px 35px rgba(255,255,255,1);
+    -moz-box-shadow: inset 0px 0px 35px 35px rgba(255,255,255,1);
+    box-shadow: inset 0px 0px 35px 35px rgba(255,255,255,1);
+  }
+
+  .name-header{
+    font-size:300%;
+  }
+
+  .title-header{
+    font-size:160%;
+  }
+
+  .based-in{
+    margin-top:5px;
+    font-size:160%;
+  }
+
+  .icon-color > i{
+    font-size:120%;
+  }
+
+  .intro-unit {
+      padding: 20px;
+  }
+
+}
+
+.legend {
+	fill: #b3b3b3;
+  font-family: "Raleway","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.tooltip {
+	fill: #000000;
+  font-family: "Raleway","Helvetica Neue",Helvetica,Arial,sans-serif;
+}

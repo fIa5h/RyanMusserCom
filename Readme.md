@@ -1,8 +1,9 @@
-Example webpack config using React and HMR
+Hello :)
+
 ---
 
-This is an example repo for the [Using Webpack's Hot Module Replacement with
-React][blog-link] tutorial.
+Want a great tutorial on [Using Webpack's Hot Module Replacement with
+React?][blog-link].
 
 [blog-link]: http://matthewlehner.net/react-hot-module-replacement-with-webpack/
 
@@ -12,6 +13,8 @@ To run:
 - run `npm install`
 - run `npm start`
 - visit http://localhost:8080
-- edit anything in the `render` method of `App.js` and see HMR at work.
+- edit any of the components in the `render` method of `./src/index.js` and see HMR at work.
+
+
 
 Pull requests welcome!
