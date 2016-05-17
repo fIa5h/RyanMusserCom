@@ -15,8 +15,18 @@ class RadialChart extends Component{
               beginAtZero: true
           }
       },
-      showTooltips: false
+      showTooltips: false,
+      scaleOverride: true,
+      scaleSteps: 5,
+      scaleStepWidth: 2,
+      scaleStartValue: 0,
+      responsive: true
     }
+    
+    console.log('/ / / /');
+    console.log('active players');
+    console.log(this.props.activePlayers);
+    console.log('/ / / /');
 
     if(this.props.activePlayers.length === 0){
 
@@ -34,7 +44,7 @@ class RadialChart extends Component{
       }
 
       var data = {
-        labels: ["Points", "Threes", "Rebounds", "Assists", "Steals", "Blocks"],
+        labels: ["Points", "Threes", "Assists", "Steals", "Blocks", "Rebounds"],
         datasets: [emptyDataSet]
       };
 
@@ -53,10 +63,10 @@ class RadialChart extends Component{
         var playerStats = [
           player.Points*10,
           player.Threes*10,
-          player.Rebounds*10,
           player.Assists*10,
           player.Steals*10,
-          player.Blocks*10
+          player.Blocks*10,
+          player.Rebounds*10
         ]
 
         var thisPlayerData = {
@@ -75,12 +85,9 @@ class RadialChart extends Component{
       });
 
       var data = {
-        labels: ["Points", "Threes", "Rebounds", "Assists", "Steals", "Blocks"],
+        labels: ["Points", "Threes", "Assists", "Steals", "Blocks", "Rebounds"],
         datasets: dataSet
       }
-
-      console.log('dataSet');
-      console.log(dataSet);
 
       return(
         <div>

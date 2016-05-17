@@ -16,7 +16,6 @@ export default function(){
       Class: 'gsw-1'
     },
     {
-      Key: 1,
       Name: 'DeMarcus Cousins',
       Position: 'Forward',
       Team: 'SAC',
