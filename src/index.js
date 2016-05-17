@@ -5,6 +5,8 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 
 import PlayerTable from './containers/radial-chart/player-table';
+import RadialChart from './containers/radial-chart/radial-chart';
+
 
 import reducers from './reducers';
 
@@ -39,6 +41,13 @@ ReactDOM.render(
 		<PlayerTable />
 	</Provider>,
 	document.querySelector('.player-table-container')
+);
+
+ReactDOM.render(
+	<Provider store={store}>
+		<RadialChart />
+	</Provider>,
+	document.querySelector('.radial-chart-container')
 );
 //
 // ReactDOM.render(

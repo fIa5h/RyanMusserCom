@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>React HMR example</title>
+    <title>RyanMusser.com</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -11,85 +11,68 @@
 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-aNUYGqSUL9wG/vP7+cWZ5QOM4gsQou3sBfWRr/8S3R1Lv0rysEmnwsRKMbhiQX/O" crossorigin="anonymous">
 
-    <link href="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css" rel="stylesheet">
-    <link href="https://cdn.datatables.net/responsive/2.0.2/css/responsive.dataTables.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
-
-    <script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.11/js/dataTables.bootstrap.min.js"></script>
-    <script src="https://cdn.datatables.net/responsive/2.0.2/js/dataTables.responsive.min.js"></script>
-
     <script src="./js/js.js"></script>
-    <script src="./js/chart.js"></script>
 
   </head>
   <body>
 
-    <div id="intro" data-speed="2" data-type="background" class="scalable-white-box-shadow">
+    <div id="intro" data-speed="1" data-type="background" class="scalable-white-box-shadow">
       <div class="intro-unit">
-
-          <div class="react-container">
-
-          </div>
-
-          <div class="react-container-2">
-
-          </div>
 
           <h1 class="name-header">
             <b>Ryan Musser</b>
           </h1>
           <h1 class="title-header">
-            Computer Scientist
+            Software Engineer
           </h1>
           <h2 class="based-in">
             <small class="based-in-color">Based in San Francisco, CA.</small>
           </h2>
           <ul class="list-inline">
             <li>
-              <a href="#" class="hvr-float-shadow icon-color">
+              <a href="https://github.com/RyanThomasMusser" target="_blank" class="hvr-float-shadow icon-color">
                 <i class="fa fa-github" aria-hidden="true"></i>
               </a>
             </li>
 
             <li>
-              <a href="#" class="hvr-float-shadow icon-color">
+              <a href="https://www.linkedin.com/in/ryanthomasmusser" target="_blank" class="hvr-float-shadow icon-color">
                 <i class="fa fa-linkedin" aria-hidden="true"></i>
               </a>
             </li>
 
             <li>
-              <a href="#" class="hvr-float-shadow icon-color">
+              <a href="https://twitter.com/TheRyanMusser" target="_blank" class="hvr-float-shadow icon-color">
                 <i class="fa fa-twitter" aria-hidden="true"></i>
               </a>
             </li>
 
             <li>
-              <a href="#" class="hvr-float-shadow icon-color">
+              <a href="http://stackoverflow.com/users/2260737/mussser" target="_blank" class="hvr-float-shadow icon-color">
                 <i class="fa fa-stack-overflow" aria-hidden="true"></i>
               </a>
             </li>
 
             <li>
-              <a href="#" class="hvr-float-shadow icon-color">
+              <a href="https://www.instagram.com/theryanmusser/" target="_blank" class="hvr-float-shadow icon-color">
                 <i class="fa fa-instagram" aria-hidden="true"></i>
               </a>
             </li>
 
             <li>
-              <a href="#" class="hvr-float-shadow icon-color">
+              <a href="https://www.facebook.com/Flash.Musser" target="_blank" class="hvr-float-shadow icon-color">
                 <i class="fa fa-facebook" aria-hidden="true"></i>
               </a>
             </li>
 
             <li>
-              <a href="#" class="hvr-float-shadow icon-color">
+              <a href="https://www.youtube.com/user/MrRyanFlash" class="hvr-float-shadow icon-color">
                 <i class="fa fa-youtube" aria-hidden="true"></i>
               </a>
             </li>
@@ -116,15 +99,15 @@
         </div>
 
         (
-        <a href="#" class="hvr-float-shadow link-decoration">
-          D3.js
+        <a href="https://github.com/jhudson8/react-chartjs" target="_blank" class="hvr-float-shadow link-decoration">
+          Chart.js
         </a>
         +
-        <a href="#" class="hvr-float-shadow link-decoration">
+        <a href="http://facebook.github.io/react/" target="_blank" class="hvr-float-shadow link-decoration">
           React.js
         </a>
         +
-        <a href="#" class="hvr-float-shadow link-decoration">
+        <a href="http://redux.js.org/" target="_blank" class="hvr-float-shadow link-decoration">
           Redux.js
         </a>
         )
@@ -132,7 +115,7 @@
       </div>
 
       <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
-        <div class="radarChart"></div>
+        <div class="radial-chart-container" style="height:315px;"></div>
       </div>
 
       <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
@@ -155,57 +138,6 @@
 
 
   </body>
-
-  <script>
-
-      $(document).ready(function() {
-
-
-
-      } );
-
-			//////////////////////////////////////////////////////////////
-			//////////////////////// Set-Up //////////////////////////////
-			//////////////////////////////////////////////////////////////
-
-			var margin = {top: 40, right: 50, bottom: 40, left: 40},
-				width = Math.min(300, window.innerWidth - 10) - margin.left - margin.right,
-				height = Math.min(width, window.innerHeight - margin.top - margin.bottom - 20);
-
-			//////////////////////////////////////////////////////////////
-			////////////////////////// Data //////////////////////////////
-			//////////////////////////////////////////////////////////////
-
-			var data = [
-					  [//iPhone
-						{axis:"Points",value:0},
-						{axis:"3's Made",value:0},
-						{axis:"Rebounds",value:0},
-						{axis:"Asissts",value:0},
-						{axis:"Steals",value:0},
-						{axis:"Blocks",value:0},
-            {axis:"Turnovers",value:0}
-					  ]
-					];
-			//////////////////////////////////////////////////////////////
-			//////////////////// Draw the Chart //////////////////////////
-			//////////////////////////////////////////////////////////////
-
-			var color = d3.scale.ordinal()
-				.range(["#b3b3b3","#CC333F","#00A0B0"]);
-
-			var radarChartOptions = {
-			  w: width,
-			  h: height,
-			  margin: margin,
-			  maxValue: 1,
-			  levels: 5,
-			  roundStrokes: true,
-			  color: color
-			};
-			//Call function to draw the Radar chart
-			RadarChart(".radarChart", data, radarChartOptions);
-		</script>
 
   <script src="/static/bundle.js"></script>
 </html>

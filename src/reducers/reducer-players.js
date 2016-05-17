@@ -10,7 +10,10 @@ export default function(){
       Rebounds: 0.37,
       Assists: 0.57,
       Steals: 0.98,
-      Blocks: 0.05
+      Blocks: 0.05,
+      Color: '#006BB6',
+      rgbOpaque: 'rgba(0, 107, 182, 0.25)',
+      Class: 'gsw-1'
     },
     {
       Key: 1,
@@ -22,7 +25,10 @@ export default function(){
       Rebounds: 0.79,
       Assists: 0.28,
       Steals: 0.73,
-      Blocks: 0.39
+      Blocks: 0.39,
+      Color: '#724C9F',
+      rgbOpaque: 'rgba(114, 76, 159, 0.25)',
+      Class: 'sac-1'
     },
     {
       Key: 2,
@@ -34,7 +40,10 @@ export default function(){
       Rebounds: 0.55,
       Assists: 0.41,
       Steals: 0.42,
-      Blocks: 0.31
+      Blocks: 0.31,
+      Color: '#F05133',
+      rgbOpaque: 'rgba(240, 81, 51, 0.25)',
+      Class: 'okc-1'
     },
     {
       Key: 3,
@@ -46,7 +55,10 @@ export default function(){
       Rebounds: 0.71,
       Assists: 0.16,
       Steals: 0.60,
-      Blocks: 0.57
+      Blocks: 0.57,
+      Color: '#002b5c',
+      rgbOpaque: 'rgba(0, 43, 92, 0.25)',
+      Class: 'nop-1'
     },
     {
       Key: 4,
@@ -58,7 +70,10 @@ export default function(){
       Rebounds: 0.66,
       Assists: 0.63,
       Steals: 0.69,
-      Blocks: 0.41
+      Blocks: 0.41,
+      Color: '#FDB927',
+      rgbOpaque: 'rgba(253, 185, 39, 0.25)',
+      Class: 'gsw-2'
     },
     {
       Key: 5,
@@ -70,22 +85,13 @@ export default function(){
       Rebounds: 1,
       Assists: 0.07,
       Steals: 0.66,
-      Blocks: 0.39
+      Blocks: 0.39,
+      Color: '#ED174C',
+      rgbOpaque: 'rgba(237, 23, 76, 0.25)',
+      Class: 'det-1'
     },
     {
       Key: 6,
-      Name: 'Kawhi Leonard',
-      Position: 'Forward',
-      Team: 'SAS',
-      Points: 0.72,
-      Threes: 0.35,
-      Rebounds: 0.47,
-      Asissts: 0.22,
-      Steals: 0.8,
-      Blocks: 0.29
-    },
-    {
-      Key: 7,
       Name: 'Rajon Rondo',
       Position: 'Guard',
       Team: 'SAC',
@@ -94,7 +100,10 @@ export default function(){
       Rebounds: 0.42,
       Assists: 1,
       Steals: 0.93,
-      Blocks: 0.03
+      Blocks: 0.03,
+      Color: '#8E9090',
+      rgbOpaque: 'rgba(142, 144, 144, 0.25)',
+      Class: 'sac-2'
     },
   ]
 }
