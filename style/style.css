@@ -116,8 +116,16 @@ body{
   font-family: "Raleway","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+.player-row:hover{
+  cursor:pointer;
+}
+
+.player-row{
+  background: white;
+}
+
 .gsw-1:hover{
-  background: rgba(0, 107, 182, 0.15) !important;
+  background: rgba(0, 107, 182, 0.15);
 }
 
 .player-table-container > .table > tbody > tr.gsw-1.active > td {
@@ -125,7 +133,7 @@ body{
 }
 
 .gsw-2:hover{
-  background: rgba(253, 185, 39, 0.15) !important;
+  background: rgba(253, 185, 39, 0.15);
 }
 
 .player-table-container > .table > tbody > tr.gsw-2.active > td {
@@ -133,7 +141,7 @@ body{
 }
 
 .sac-1:hover{
-  background: rgba(114, 76, 159, 0.15) !important;
+  background: rgba(114, 76, 159, 0.15);
 }
 
 .player-table-container > .table > tbody > tr.sac-1.active > td {
@@ -141,7 +149,7 @@ body{
 }
 
 .sac-2:hover{
- background: rgba(142, 144, 144, 0.25) !important;
+ background: rgba(142, 144, 144, 0.25);
 }
 
 .player-table-container > .table > tbody > tr.sac-2.active > td {
@@ -149,23 +157,23 @@ body{
 }
 
 .okc-1:hover{
-  background: rgba(240, 81, 51, 0.15) !important;
+  background: rgba(240, 81, 51, 0.15);
 }
 
 .player-table-container > .table > tbody > tr.okc-1.active > td {
   background: rgba(240, 81, 51, 0.25) !important;
 }
 
-.nop-1:active, .nop-1:hover{
-  background: rgba(0, 43, 92, 0.15) !important;
+.nop-1:hover{
+  background: rgba(0, 43, 92, 0.15);
 }
 
 .player-table-container > .table > tbody > tr.nop-1.active > td {
   background: rgba(0, 43, 92, 0.25) !important;
 }
 
-.det-1:active, .det-1:hover{
-  background: rgba(237, 23, 76, 0.15) !important;
+.det-1:hover{
+  background: rgba(237, 23, 76, 0.15);
 }
 
 .player-table-container > .table > tbody > tr.det-1.active > td {

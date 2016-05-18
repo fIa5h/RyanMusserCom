@@ -21,6 +21,7 @@ $(document).ready(function(){
 
   $( ".player-row" ).click(function() {
     $( this ).toggleClass( "active" );
+    $( this ).toggleClass('white');
   });
 
 }); // close out script
