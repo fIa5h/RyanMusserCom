@@ -3,7 +3,6 @@
 }
 
 #intro {
-    position: fixed;
     background: url(../img/polka.png) repeat;
     margin: 0 auto;
     width: 100%;
@@ -58,6 +57,11 @@ body{
   background: #ffffff !important;
   color: #b3b3b3 !important;
   font-family: "Raleway","Helvetica Neue",Helvetica,Arial,sans-serif;
+
+  height:100%;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  -moz-overflow-scrolling: touch;
 }
 
 .scalable-white-box-shadow{
