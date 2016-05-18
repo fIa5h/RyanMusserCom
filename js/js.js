@@ -33,7 +33,7 @@ $(document).ready(function(){
   //when the mobile browser's nav bar hides
   if(isMobile === true){
     var introHeight = $( "#intro" ).height();
-    $( "#intro" ).height(introHeight);
+    $( "#intro" ).css({ height : introHeight+'px' });
 
     $( ".player-row" ).click(function() {
       $( this ).toggleClass( "active" );
