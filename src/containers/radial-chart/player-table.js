@@ -8,7 +8,7 @@ class PlayerTable extends Component{
   renderPlayerTable(){
     return this.props.players.map((player) => {
       return (
-        <tr key={player.Key} className={player.Class + " player-row white"} onClick={() => this.props.selectPlayer(player)}>
+        <tr key={player.Key} className={player.Class + " player-row"} onClick={() => this.props.selectPlayer(player)}>
           <td>{player.Name}</td>
           <td>{player.Team}</td>
           <td>{player.Position}</td>

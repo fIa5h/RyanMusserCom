@@ -34,11 +34,21 @@ $(document).ready(function(){
   if(isMobile === true){
     var introHeight = $( "#intro" ).height();
     $( "#intro" ).height(introHeight);
+
+    $( ".player-row" ).click(function() {
+      $( this ).toggleClass( "active" );
+      $( this ).toggleClass('white');
+    });
+
+    $('.player-row').each(function() {
+      $( this ).toggleClass('white');
+    });
+
+  }else{
+    $( ".player-row" ).click(function() {
+      $( this ).toggleClass( "active" );
+    });
   }
 
-  $( ".player-row" ).click(function() {
-    $( this ).toggleClass( "active" );
-    $( this ).toggleClass('white');
-  });
 
 }); // close out script
