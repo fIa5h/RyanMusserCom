@@ -15,14 +15,17 @@ class RadialChart extends Component{
               beginAtZero: true
           }
       },
-      showTooltips: false,
+      //showTooltips: false,
       scaleOverride: true,
       scaleSteps: 5,
-      scaleStepWidth: 2,
+      scaleStepWidth: 20,
       scaleStartValue: 0,
-      responsive: true
+      responsive: true,
+      tooltipTemplate: "",
+      tooltipFillColor: "rgba(0,0,0,0.3)",
+      multiTooltipTemplate: "<%=datasetLabel%>  :  <%= value %>%"
     }
-    
+
     console.log('/ / / /');
     console.log('active players');
     console.log(this.props.activePlayers);
@@ -61,13 +64,14 @@ class RadialChart extends Component{
       this.props.activePlayers.map((player) => {
         //lets construct our player data set
         var playerStats = [
-          player.Points*10,
-          player.Threes*10,
-          player.Assists*10,
-          player.Steals*10,
-          player.Blocks*10,
-          player.Rebounds*10
+          Math.round(player.Points*100),
+          Math.round(player.Threes*100),
+          Math.round(player.Assists*100),
+          Math.round(player.Steals*100),
+          Math.round(player.Blocks*100),
+          Math.round(player.Rebounds*100)
         ]
+
 
         var thisPlayerData = {
           label: player.Name,
