@@ -120,7 +120,11 @@ body{
   cursor:pointer;
 }
 
-.player-row{
+.white{
+  background: white !important;
+}
+
+.white:hover{
   background: white;
 }
 
