@@ -2,28 +2,6 @@ $(document).ready(function(){
   // cache the window object
   $window = $(window);
 
-  $('div[data-type="background"]').each(function() {
-      // declare the variable to affect the defined data-type
-      var $scroll = $(this);
-
-      //check if the element is visible
-      if($scroll.visible() === true){
-        //then we will start the parallax effect
-        $(window).scroll(function() {
-            // HTML5 proves useful for helping with creating JS functions!
-            // also, negative value because we're scrolling upwards
-            var yPos = -($window.scrollTop() / $scroll.data('speed'));
-
-            // background position
-            var coords = '50% ' + yPos + 'px';
-
-            // move the background
-            $scroll.css({ backgroundPosition: coords });
-        }); // end window scroll
-      }
-
-  });  // end section function
-
   var isMobile = false; //initiate as false
   // device detection
   if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent)
@@ -32,8 +10,10 @@ $(document).ready(function(){
   //here we're accounting for the screen jump
   //when the mobile browser's nav bar hides
   if(isMobile === true){
+
     var introHeight = $( "#intro" ).height();
-    $( "#intro" ).css({ height : introHeight+'px' });
+    
+    $( "#intro" ).css({ height : introHeight+'px !important' });
 
     $( ".player-row" ).click(function() {
       $( this ).toggleClass( "active" );
@@ -45,6 +25,26 @@ $(document).ready(function(){
     });
 
   }else{
+
+    //not mobile? let's initiate parallax
+    $('div[data-type="background"]').each(function() {
+        // declare the variable to affect the defined data-type
+        var $scroll = $(this);
+
+        $(window).scroll(function() {
+            // HTML5 proves useful for helping with creating JS functions!
+            // also, negative value because we're scrolling upwards
+            var yPos = -($window.scrollTop() / $scroll.data('speed'));
+
+            // background position
+            var coords = '50% ' + yPos + 'px';
+
+            // move the background
+            $scroll.css({ backgroundPosition: coords });
+        }); // end window scroll
+
+    });  // end section function
+
     $( ".player-row" ).click(function() {
       $( this ).toggleClass( "active" );
     });
