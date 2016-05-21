@@ -12,8 +12,9 @@ $(document).ready(function(){
   if(isMobile === true){
 
     var introHeight = $( "#intro" ).height();
-    
+    var introUnitHeight = $('#intro-unit').height();
     $( "#intro" ).css({ height : introHeight+'px !important' });
+    $( "#intro-unit" ).css({ height : introUnitHeight+'px !important' });
 
     $( ".player-row" ).click(function() {
       $( this ).toggleClass( "active" );

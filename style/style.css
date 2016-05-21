@@ -9,7 +9,7 @@
     height:100vh;
 }
 
-.intro-unit {
+#intro-unit {
     color: #4582ec;
     text-align: center;
     text-shadow: -1px 0 #ffffff, 0 1px #ffffff, 1px 0 #ffffff, 0 -1px #ffffff;
@@ -212,7 +212,7 @@ body{
       font-size:130%;
     }
 
-    .intro-unit {
+    #intro-unit {
         padding: 30px;
     }
 
@@ -237,7 +237,7 @@ body{
     font-size:120%;
   }
 
-  .intro-unit {
+  #intro-unit {
       padding: 20px;
   }
 
