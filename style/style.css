@@ -55,7 +55,7 @@ body{
   padding-left: 0px;
   padding-right: 0px;
   background: #ffffff !important;
-  color: #b3b3b3 !important;
+  color: #777777 !important;
   font-family: "Raleway","Helvetica Neue",Helvetica,Arial,sans-serif;
 
   height:100%;
@@ -78,11 +78,11 @@ body{
 }
 
 .title-header{
-  color:#b3b3b3;
+  color:#777777;
 }
 
 .icon-color > i{
-  color:#d0d0d0;
+  color:#777;
   font-size:170%;
 }
 
@@ -99,7 +99,7 @@ body{
 }
 
 .based-in-color{
-  color: #d0d0d0;
+  color: #777;
 }
 
 .features-header{
