@@ -15,7 +15,6 @@ $(document).ready(function(){
     var introUnitHeight = $('#intro-unit').outerHeight();
     $( "#intro" ).css({ 'height' : ''+introHeight+'px' });
     $( "#intro-unit" ).css({ 'height' : ''+introUnitHeight+'px' });
-    $("#intro-unit").css('position','relative');
 
     $( ".player-row" ).click(function() {
       $( this ).toggleClass( "active" );
