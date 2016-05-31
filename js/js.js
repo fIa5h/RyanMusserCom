@@ -15,11 +15,7 @@ $(document).ready(function(){
     var introUnitHeight = $('#intro-unit').outerHeight();
     $( "#intro" ).css({ 'height' : ''+introHeight+'px' });
     $( "#intro-unit" ).css({ 'height' : ''+introUnitHeight+'px' });
-    // var introUnitMarginTop = $("#intro-unit").css("marginTop");
-    // $("#intro-unit").css('margin-top',introUnitMarginTop+'px');
-    // var introUnitMarginBottom = $("#intro-unit").css("marginBottom");
-    // $("#intro-unit").css('margin-bottom',introUnitMarginBottom+'px');
-    // $("#intro-unit").css('position','relative');
+    $("#intro-unit").css('position','relative');
 
     $( ".player-row" ).click(function() {
       $( this ).toggleClass( "active" );
