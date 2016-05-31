@@ -11,10 +11,12 @@ $(document).ready(function(){
   //when the mobile browser's nav bar hides
   if(isMobile === true){
 
-    var introHeight = $( "#intro" ).height();
-    var introUnitHeight = $('#intro-unit').height();
-    $( "#intro" ).css({ height : introHeight+'px !important' });
-    $( "#intro-unit" ).css({ height : introUnitHeight+'px !important' });
+    var bg = jQuery("#intro, #empty-ny");
+    jQuery(window).resize("resizeBackground");
+    function resizeBackground() {
+        bg.height(jQuery(window).height() + 60);
+    }
+    resizeBackground();
 
     $( ".player-row" ).click(function() {
       $( this ).toggleClass( "active" );
