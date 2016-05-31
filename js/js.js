@@ -14,7 +14,7 @@ $(document).ready(function(){
     var introUnitHeight = $('#intro-unit').height();
     $( "#intro-unit" ).css({ height : introUnitHeight+'px !important' });
 
-    var bg = jQuery("#intro, #empty-ny, #intro-unit");
+    var bg = jQuery("#intro, #empty-ny");
     jQuery(window).resize("resizeBackground");
     function resizeBackground() {
         bg.height(jQuery(window).height() + 60);
