@@ -14,12 +14,12 @@ $(document).ready(function(){
     var introUnitHeight = $('#intro-unit').height();
     $( "#intro-unit" ).css({ height : introUnitHeight+'px !important' });
 
-    var bg = jQuery("#intro, #empty-ny");
+    var bg = jQuery("#intro, #empty-ny, #intro-unit");
     jQuery(window).resize("resizeBackground");
     function resizeBackground() {
         bg.height(jQuery(window).height() + 60);
     }
-    resizeBackground();
+    //resizeBackground();
 
     $( ".player-row" ).click(function() {
       $( this ).toggleClass( "active" );
