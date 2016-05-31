@@ -11,14 +11,10 @@ $(document).ready(function(){
   //when the mobile browser's nav bar hides
   if(isMobile === true){
 
-    var introHeight = $( "#intro" ).height();
-    var introUnitHeight = $('#intro-unit').height();
-    $( "#intro" ).css({ 'height' : ''+introHeight+'px !important' });
-    $( "#intro-unit" ).css({ 'height' : ''+introUnitHeight+'px !important' });
-    var introUnitMarginTop = $("#intro-unit").css("marginTop");
-    $("#intro-unit").css('margin-top',introUnitMarginTop+'px !important');
-    var introUnitMarginBottom = $("#intro-unit").css("marginBottom");
-    $("#intro-unit").css('margin-bottom',introUnitMarginBottom+'px !important');
+    var introHeight = $( "#intro" ).outerHeight();
+    var introUnitHeight = $('#intro-unit').outerHeight();
+    $( "#intro" ).css({ 'height' : ''+introHeight+'px' });
+    $( "#intro-unit" ).css({ 'height' : ''+introUnitHeight+'px' });
 
     $( ".player-row" ).click(function() {
       $( this ).toggleClass( "active" );

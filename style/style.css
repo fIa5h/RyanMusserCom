@@ -57,8 +57,6 @@ body{
   background: #ffffff !important;
   color: #777777 !important;
   font-family: "Raleway","Helvetica Neue",Helvetica,Arial,sans-serif;
-
-  height:100%;
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
   -moz-overflow-scrolling: touch;
@@ -212,10 +210,6 @@ body{
       font-size:130%;
     }
 
-    #intro-unit {
-        padding: 30px;
-    }
-
 }
 
 @media only screen and (max-width: 650px) {
@@ -235,10 +229,6 @@ body{
 
   .icon-color > i{
     font-size:120%;
-  }
-
-  #intro-unit {
-      padding: 20px;
   }
 
 }
