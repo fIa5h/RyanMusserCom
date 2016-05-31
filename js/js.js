@@ -16,9 +16,9 @@ $(document).ready(function(){
     $( "#intro" ).css({ 'height' : ''+introHeight+'px' });
     $( "#intro-unit" ).css({ 'height' : ''+introUnitHeight+'px' });
     var introUnitMarginTop = $("#intro-unit").css("marginTop");
-    $("#intro-unit").css('margin-top',introUnitMarginTop+'px !important');
+    $("#intro-unit").css('margin-top',introUnitMarginTop+'px');
     var introUnitMarginBottom = $("#intro-unit").css("marginBottom");
-    $("#intro-unit").css('margin-bottom',introUnitMarginBottom+'px !important');
+    $("#intro-unit").css('margin-bottom',introUnitMarginBottom+'px');
 
     $( ".player-row" ).click(function() {
       $( this ).toggleClass( "active" );
