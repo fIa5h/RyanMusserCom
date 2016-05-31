@@ -19,6 +19,7 @@ $(document).ready(function(){
     $("#intro-unit").css('margin-top',introUnitMarginTop+'px');
     var introUnitMarginBottom = $("#intro-unit").css("marginBottom");
     $("#intro-unit").css('margin-bottom',introUnitMarginBottom+'px');
+    $("#intro-unit").css('position','relative');
 
     $( ".player-row" ).click(function() {
       $( this ).toggleClass( "active" );
