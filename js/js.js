@@ -11,7 +11,7 @@ $(document).ready(function(){
   //when the mobile browser's nav bar hides
   if(isMobile === true){
 
-    var bg = jQuery("#intro, #empty-ny");
+    var bg = jQuery("#intro, #empty-ny, #intro-unit");
     jQuery(window).resize("resizeBackground");
     function resizeBackground() {
         bg.height(jQuery(window).height() + 60);
