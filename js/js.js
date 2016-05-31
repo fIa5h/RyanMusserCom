@@ -13,8 +13,12 @@ $(document).ready(function(){
 
     var introHeight = $( "#intro" ).height();
     var introUnitHeight = $('#intro-unit').height();
-    $( "#intro" ).css({ height : introHeight+'px !important' });
-    $( "#intro-unit" ).css({ height : introUnitHeight+'px !important' });
+    $( "#intro" ).css({ 'height' : ''+introHeight+'px !important' });
+    $( "#intro-unit" ).css({ 'height' : ''+introUnitHeight+'px !important' });
+    var introUnitMarginTop = $("#intro-unit").css("marginTop");
+    $("#intro-unit").css('margin-top',introUnitMarginTop+'px !important');
+    var introUnitMarginBottom = $("#intro-unit").css("marginBottom");
+    $("#intro-unit").css('margin-bottom',introUnitMarginBottom+'px !important');
 
     $( ".player-row" ).click(function() {
       $( this ).toggleClass( "active" );
