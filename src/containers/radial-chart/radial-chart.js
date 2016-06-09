@@ -23,13 +23,8 @@ class RadialChart extends Component{
       responsive: true,
       tooltipTemplate: "",
       tooltipFillColor: "rgba(0,0,0,0.3)",
-      multiTooltipTemplate: "<%=datasetLabel%>  :  <%= value %>%"
+      multiTooltipTemplate: "<%= value %>%"
     }
-
-    console.log('/ / / /');
-    console.log('active players');
-    console.log(this.props.activePlayers);
-    console.log('/ / / /');
 
     if(this.props.activePlayers.length === 0){
 

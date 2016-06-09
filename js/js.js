@@ -16,6 +16,17 @@ $(document).ready(function(){
     $( "#intro" ).css({ 'height' : ''+introHeight+'px' });
     $( "#intro-unit" ).css({ 'height' : ''+introUnitHeight+'px' });
 
+    //let's calculate the new margins
+    var totalNewMargins = introHeight-introUnitHeight;
+    var newMargins = totalNewMargins/2;
+
+    //let's now relatively position our element and put the new margins in to place
+    $( "#intro-unit" ).css({ 'position' : 'relative' });
+    $( "#intro-unit" ).css({ 'margin-top' : ''+newMargins+'px' });
+    $( "#intro-unit" ).css({ 'margin-bottom' : ''+newMargins+'px' });
+
+    //
+
     $( ".player-row" ).click(function() {
       $( this ).toggleClass( "active" );
       $( this ).toggleClass('white');
