@@ -2,10 +2,9 @@ Hello :)
 
 ---
 
-Want a great tutorial on [Using Webpack's Hot Module Replacement with
-React?][blog-link].
+This repository is for my [personal website][my-link]
 
-[blog-link]: http://matthewlehner.net/react-hot-module-replacement-with-webpack/
+[my-link]: http://ryanmusser.com
 
 To run:
 
@@ -17,4 +16,4 @@ To run:
 
 
 
-Pull requests welcome!
+Trying to contact me? Hit me at ryanthomasmusser@gmail.com
