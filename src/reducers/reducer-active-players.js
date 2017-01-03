@@ -17,7 +17,7 @@ export default function( state = [] , action ){
         var indexToRemove = 0;
         state.map(function (player, index) {
           if(action.payload.Name == player.Name){
-            console.log('player found');
+            //console.log('player found');
             playerExistsInArray = 1;
             indexToRemove = index;
           }
