@@ -15,15 +15,15 @@ class RadialChart extends Component{
               beginAtZero: true
           }
       },
-      //showTooltips: false,
+      showTooltips: false,
       scaleOverride: true,
       scaleSteps: 5,
       scaleStepWidth: 20,
       scaleStartValue: 0,
       responsive: true,
       tooltipTemplate: "",
-      tooltipFillColor: "rgba(0,0,0,0.3)",
-      multiTooltipTemplate: "<%= value %>%"
+      tooltipFillColor: "rgba(0,0,0,0.3)"
+      //multiTooltipTemplate: "<%= value %>%"
     }
 
     if(this.props.activePlayers.length === 0){
