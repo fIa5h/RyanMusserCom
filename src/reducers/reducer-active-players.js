@@ -23,13 +23,13 @@ export default function( state = [] , action ){
           }
         });
 
-        if(playerExistsInArray === 0){
+        if(playerExistsInArray == 0){
           return [ action.payload, ...state ];
+        }else if(playerExistsInArray == 1 && state.length == 1){
+          return [];
         }else{
           return [...state.slice(0, indexToRemove), ...state.slice(indexToRemove + 1)];
         }
-
-        return state;
 
       }
   }

@@ -20,7 +20,7 @@ export default function(){
       Position: 'Forward',
       Team: 'SAC',
       Points: 0.9,
-      Threes: 0.21,
+      Threes: 0.51,
       Rebounds: 0.79,
       Assists: 0.28,
       Steals: 0.73,
@@ -39,7 +39,7 @@ export default function(){
       Rebounds: 0.55,
       Assists: 0.41,
       Steals: 0.42,
-      Blocks: 0.31,
+      Blocks: 0.41,
       Color: '#F05133',
       rgbOpaque: 'rgba(240, 81, 51, 0.25)',
       Class: 'okc-1'
@@ -54,7 +54,7 @@ export default function(){
       Rebounds: 0.71,
       Assists: 0.16,
       Steals: 0.60,
-      Blocks: 0.57,
+      Blocks: 0.87,
       Color: '#002b5c',
       rgbOpaque: 'rgba(0, 43, 92, 0.25)',
       Class: 'nop-1'
@@ -84,7 +84,7 @@ export default function(){
       Rebounds: 1,
       Assists: 0.07,
       Steals: 0.66,
-      Blocks: 0.39,
+      Blocks: 0.49,
       Color: '#ED174C',
       rgbOpaque: 'rgba(237, 23, 76, 0.25)',
       Class: 'det-1'

@@ -22,24 +22,23 @@ class RadialChart extends Component{
       scaleStartValue: 0,
       responsive: true,
       tooltipTemplate: "",
-      tooltipFillColor: "rgba(0,0,0,0.3)",
-      redraw:true
+      tooltipFillColor: "rgba(0,0,0,0.3)"
       //multiTooltipTemplate: "<%= value %>%"
     }
 
-    if(this.props.activePlayers.length === 0){
+    if(this.props.activePlayers.length == 0){
 
       //the chart doesn't render without a data set
       //so we're passing it a hacky ghost data set
       var emptyDataSet = {
-        label: "",
+        label: "No Players Selected",
         fillColor: "rgba(220,220,220,0.0)",
         strokeColor: "rgba(220,220,220,0)",
         pointColor: "rgba(220,220,220,0)",
         pointStrokeColor: "#fff",
         pointHighlightFill: "#fff",
         pointHighlightStroke: "rgba(220,220,220,1)",
-        data: [0, 0, 0, 0, 0, 0]
+        data: [1, 1, 1, 1, 1, 1]
       }
 
       var data = {
@@ -49,7 +48,7 @@ class RadialChart extends Component{
 
       return(
         <div>
-          <RadarChart data={data} options={options} height="278" width="400"/>
+          <RadarChart redraw data={data} options={options} height="278" width="400"/>
         </div>
       );
 
