@@ -22,7 +22,8 @@ class RadialChart extends Component{
       scaleStartValue: 0,
       responsive: true,
       tooltipTemplate: "",
-      tooltipFillColor: "rgba(0,0,0,0.3)"
+      tooltipFillColor: "rgba(0,0,0,0.3)",
+      redraw:true
       //multiTooltipTemplate: "<%= value %>%"
     }
 
@@ -48,7 +49,7 @@ class RadialChart extends Component{
 
       return(
         <div>
-          <RadarChart redraw data={data} options={options} height="278" width="400"/>
+          <RadarChart data={data} options={options} height="278" width="400"/>
         </div>
       );
 

@@ -109,18 +109,23 @@
           </ul>
 
       </div>
+      <!--  -->
+      <div class="arrow-down">
+        <h2><i class="fa fa-arrow-down link-decoration" aria-hidden="true"></i></h2>
+      </div>
+      <!--  -->
     </div>
 
     <div class="plain-white">
-      <h1><a href="http://BasketballRoto.com" target="_blank" class="hvr-float-shadow link-decoration">BasketballRoto.com</a></h1>
+      <h1 class="title-header"><a href="http://BasketballRoto.com" target="_blank" class="hvr-float-shadow link-decoration">BasketballRoto.com</a></h1>
       <div class="center-text">
         <a class="hvr-float-shadow link-decoration" href="http://ryanmusser.tumblr.com/post/155357116257/my-side-project-basketballrotocom" target="_blank">Here's an article</a> describing how and why I created <a href="http://BasketballRoto.com" target="_blank" class="hvr-float-shadow link-decoration">BasketballRoto.com</a>.
-        BasketballRoto is an interface, bot and genetic algorithm combined to create a sweet fantasy basketball analytics tool. It received over 1k hits by over 120 unique users in the first month I published it.
+        BasketballRoto is an interface, bot and genetic algorithm combined to create a fantasy basketball analytics tool. It received 1k+ hits by 120+ unique users in the first month I published it.
       </div>
     </div>
 
     <div id="genetic" data-speed="3" data-type="background" class="scalable-white-box-shadow">
-      <h1>My <a class="hvr-float-shadow link-decoration" href="http://ryanmusser.tumblr.com/post/155263725297/show-and-tell-i-published-a-compounding-genetic" target="_blank">genetic algorithm <i class="fa fa-venus-mars" aria-hidden="true"></i></a></h1>
+      <h1 class="title-header">My <a class="hvr-float-shadow link-decoration" href="http://ryanmusser.tumblr.com/post/155263725297/show-and-tell-i-published-a-compounding-genetic" target="_blank">genetic algorithm <i class="fa fa-venus-mars" aria-hidden="true"></i></a></h1>
       <div class="center-text">
         <a class="hvr-float-shadow link-decoration" href="http://ryanmusser.tumblr.com/post/155263725297/show-and-tell-i-published-a-compounding-genetic" target="_blank">Here's an article</a> describing how I created a compounding genetic algorithm to solve a pairing problem with 17,437,197,465,249,097,536,000 potential pairs with an average of 98.54% accuracy in around one second.
         It's written in javascript, open sourced on <a class="hvr-float-shadow link-decoration" href="https://github.com/RyanThomasMusser/FanduelNBALineupOptimizer" target="_blank">GitHub</a> and published as an <a class="hvr-float-shadow link-decoration" href="https://www.npmjs.com/package/fanduel_nba_lineup_optimizer" target="_blank">NPM package</a>.
@@ -189,6 +194,11 @@
       <ul class="list-group">
 
         <li class="list-group-item">
+          <a class="hvr-float-shadow link-decoration" target="_blank" href="http://138.68.24.155/">I thought that my friends spent too much time on Facebook so I trolled them with a data visualization of their usage.
+</a>
+        </li>
+
+        <li class="list-group-item">
           <a class="hvr-float-shadow link-decoration" target="_blank" href="https://github.com/RyanThomasMusser/FanduelNBALineupOptimizer">An advanced Javascript closure - My genetic pairing algorithm.
 </a>
         </li>
@@ -207,7 +217,7 @@
         </li>
 
         <li class="list-group-item">
-          <a class="hvr-float-shadow link-decoration" target="_blank" href="http://basketballroto.com">BasketballRoto.com - My side piece</a>
+          <a class="hvr-float-shadow link-decoration" target="_blank" href="http://basketballroto.com">BasketballRoto.com - My baby</a>
         </li>
 
       </ul>
@@ -287,5 +297,16 @@
 console.log('%c Welcome to my website!', styles);
 console.log('%c Interested in contacting me?', styles);
 console.log('%c Shoot me an email at RyanThomasMusser@gmail.com', styles);
+//
+//
+//
+//
+$(window).scroll(function(){
+    $(".arrow-down").css("opacity", 1 - $(window).scrollTop() / 100);
+    //
+    var bottomAddition = (35 + $(window).scrollTop()) + 'px';
+    //
+    $(".arrow-down").css("bottom", bottomAddition);
+  });
   </script>
 </html>

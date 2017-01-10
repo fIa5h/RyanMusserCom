@@ -6,9 +6,11 @@ import {bindActionCreators} from 'redux';
 class PlayerTable extends Component{
 
   renderPlayerTable(){
+    var uniqueKey = 0;
     return this.props.players.map((player) => {
+      uniqueKey++;
       return (
-        <tr key={player.Key} className={player.Class + " player-row"} onClick={() => this.props.selectPlayer(player)}>
+        <tr key={uniqueKey} className={player.Class + " player-row"} onClick={() => this.props.selectPlayer(player)}>
           <td>{player.Name}</td>
           <td>{player.Team}</td>
           <td>{player.Position}</td>
