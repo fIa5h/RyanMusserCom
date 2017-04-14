@@ -60,6 +60,8 @@ $(document).ready(function(){
     $( ".player-row" ).click(function() {
       $( this ).toggleClass( "active" );
     });
+    
+
   }
 
 

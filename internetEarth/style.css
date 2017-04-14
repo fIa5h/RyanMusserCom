@@ -1,0 +1,135 @@
+body {
+    position: relative;
+    left: -10px;
+    background-color: #444444;
+    background-image: -webkit-gradient(linear, left top, right bottom, from(#000), to(#333));
+    background-image: -webkit-linear-gradient(left top, #000, #333);
+    background-image: -moz-linear-gradient(left top, #000, #333);
+    overflow: hidden;
+    width: -webkit-calc(100% + 10px);
+    width: -moz-calc(100% + 10px);
+    width: calc(100% + 10px);
+}
+#container {
+    margin-left: -15px;
+    margin-top: -25px;
+    width: -webkit-calc(100% + 15px);
+    width: -moz-calc(100% + 15px);
+    width: calc(100% + 15px);
+    height: -webkit-calc(100% + 35px);
+    height: -moz-calc(100% + 35px);
+    height: calc(100% + 35px);
+}
+#info {
+    position: absolute;
+    z-index: 10;
+    left: 15px;
+    top: 25px;
+}
+#defs {
+    height: 0;
+    width: 0;
+}
+.frame {
+    fill: none;
+    pointer-events: all;
+}
+.feature {
+    stroke: #fff;
+    stroke-width: .5px;
+    fill: #e91712;
+}
+.globe {
+    stroke: rgba(255, 255, 255, .5);
+    stroke-width: .25px;
+}
+.star {
+    fill: #fff;
+    stroke: rgba(255, 255, 255, .5);
+    stroke-width: .25px;
+}
+.title {
+    color: white;
+    font-size: 25px;
+}
+.subtitle {
+    color: #9d9d9d;
+    font-size: 15px;
+}
+.link {
+    color: #007dd0 !important;
+    text-decoration: none !important;
+}
+#title {
+    margin-top: -20px;
+    position: absolute;
+    width: 325px;
+    overflow: visible;
+    text-align: left;
+    color: #010204;
+    font-size: 80%;
+    font-family: sans-serif;
+    background-color: rgba(0, 0, 0, 0);
+    margin-left: 25px;
+    margin-top: 10px;
+}
+#legend {
+    position: absolute;
+    width: 325px;
+    overflow: visible;
+    text-align: left;
+    color: black;
+    font-size: 80%;
+    font-family: sans-serif;
+    background-color: rgba(0, 0, 0, 0);
+    left: 10px;
+    bottom: 0px;
+}
+.legend-text {
+    position: relative;
+    top: -20px;
+    margin-left: 10px;
+}
+.color-scale-container {
+    width: 100%;
+}
+.pull-left-color {
+    float: left;
+    display: block;
+    height: 25px;
+    width: 10%;
+}
+.scale-1 {
+    background-color: #F51A00;
+}
+.scale-2 {
+    background-color: #ED5000;
+}
+.scale-3 {
+    background-color: #E58300;
+}
+.scale-4 {
+    background-color: #DDB300;
+}
+.scale-5 {
+    background-color: #CBD500;
+}
+.scale-6 {
+    background-color: #93CD00;
+}
+.scale-7 {
+    background-color: #5FC500;
+}
+.scale-8 {
+    background-color: #2FBD00;
+}
+.scale-9 {
+    background-color: #02B500;
+}
+.scale-10 {
+    background-color: #00AD26;
+}
+#tooltip {
+    border-radius: 5px;
+    padding: 3px;
+}
