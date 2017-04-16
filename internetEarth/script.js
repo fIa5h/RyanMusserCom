@@ -85,7 +85,7 @@
             .attr('class', 'globe')
             .attr("filter", "url(#glow)")
             .attr("fill", "url(#gradBlue)")
-            .on("click", function(d){
+            .on("touchstart", function(d){
               //remove active classes from previous countries
               var activeCountries = document.getElementsByClassName("feature-active");
 
@@ -114,7 +114,24 @@
               let elem = d3.select(this);
               tooltipDiv.innerHTML = '';
               tooltipDiv.style.display = "none";
-          });
+          })
+          .on("touchstart", function(d){
+            //remove active classes from previous countries
+            var activeCountries = document.getElementsByClassName("feature-active");
+
+            for(var i = (activeCountries.length - 1); i >= 0; i--)
+            {
+              let activeItem = d3.select(activeCountries[i])
+              activeItem.attr("class", "feature");
+            }
+            //
+             var tooltipDiv = document.getElementById('tooltip');
+             let elem = d3.select(this);
+             tooltipDiv.innerHTML = '';
+             tooltipDiv.style.display = "none";
+         });
+
+
 
         var g = svg.append("g"),
             features;
@@ -182,7 +199,28 @@
                   tooltipDiv.style.left = (parseInt(current_position[0]) - tooltipDiv.offsetWidth - 10)+'px';
                   tooltipDiv.style.display = "block";
                   elem.attr("class", "feature-active");
-              });
+              })
+              .on("touchstart", function(d){
+                //remove active classes from previous countries
+                var activeCountries = document.getElementsByClassName("feature-active");
+
+                for(var i = (activeCountries.length - 1); i >= 0; i--)
+                {
+                  let activeItem = d3.select(activeCountries[i])
+                  activeItem.attr("class", "feature");
+                }
+                //
+                 var current_position = d3.mouse(this);
+                 var tooltipDiv = document.getElementById('tooltip');
+                 var percentageText = typeof(d.properties.percentage) == 'undefined' ? '<10%' : d.properties.percentage+'%';
+                 let elem = d3.select(this);
+                 tooltipDiv.innerHTML = d.properties.name+' '+percentageText;
+                 tooltipDiv.style.top = '100px';
+                 tooltipDiv.style.left = '10px';
+                 tooltipDiv.style.display = "block";
+                 tooltipDiv.style.fontSize = "85";
+                 elem.attr("class", "feature-active");
+             });
         });
 
         //Redraw all items with new projections
