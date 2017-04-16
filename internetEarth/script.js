@@ -44,7 +44,7 @@
         var zoom = d3.behavior.zoom(true)
             .translate(projection.origin())
             .scale(projection.scale())
-            .scaleExtent([100, 800])
+            .scaleExtent([200, 1800])
             .on("zoom", move);
 
         var circle = d3.geo.greatCircle();
@@ -58,7 +58,7 @@
                     .on("dblclick.zoom", null);
 
         //Create a list of random stars and add them to outerspace
-        var starList = createStars(300);
+        var starList = createStars(200);
 
         var stars = svg.append("g")
             .selectAll("g")
@@ -84,7 +84,37 @@
             .attr('r', projection.scale())
             .attr('class', 'globe')
             .attr("filter", "url(#glow)")
-            .attr("fill", "url(#gradBlue)");
+            .attr("fill", "url(#gradBlue)")
+            .on("click", function(d){
+              //remove active classes from previous countries
+              var activeCountries = document.getElementsByClassName("feature-active");
+
+              for(var i = (activeCountries.length - 1); i >= 0; i--)
+              {
+                let activeItem = d3.select(activeCountries[i])
+                activeItem.attr("class", "feature");
+              }
+              //
+               var tooltipDiv = document.getElementById('tooltip');
+               let elem = d3.select(this);
+               tooltipDiv.innerHTML = '';
+               tooltipDiv.style.display = "none";
+           })
+           .on("mouseover", function(d){
+             //remove active classes from previous countries
+             var activeCountries = document.getElementsByClassName("feature-active");
+
+             for(var i = (activeCountries.length - 1); i >= 0; i--)
+             {
+               let activeItem = d3.select(activeCountries[i])
+               activeItem.attr("class", "feature");
+             }
+             //
+              var tooltipDiv = document.getElementById('tooltip');
+              let elem = d3.select(this);
+              tooltipDiv.innerHTML = '';
+              tooltipDiv.style.display = "none";
+          });
 
         var g = svg.append("g"),
             features;
@@ -112,30 +142,46 @@
                 })
                 .attr("d", function(d){ return path(circle.clip(d)); })
                 .on("mouseover", function(d){
+
+                  //remove active classes from previous countries
+                  var activeCountries = document.getElementsByClassName("feature-active");
+
+                  for(var i = (activeCountries.length - 1); i >= 0; i--)
+                  {
+                    let activeItem = d3.select(activeCountries[i])
+                    activeItem.attr("class", "feature");
+                  }
+                  //
+
                    var current_position = d3.mouse(this);
                    var tooltipDiv = document.getElementById('tooltip');
                    var percentageText = typeof(d.properties.percentage) == 'undefined' ? '<10%' : d.properties.percentage+'%';
+                   let elem = d3.select(this);
                    tooltipDiv.innerHTML = d.properties.name+' '+percentageText;
-                   tooltipDiv.style.top = current_position[1]+'px';
-                   tooltipDiv.style.left = current_position[0]+'px';
+                   tooltipDiv.style.top = (parseInt(current_position[1]) + 10)+'px';
+                   tooltipDiv.style.left = (parseInt(current_position[0]) + 10)+'px';
                    tooltipDiv.style.display = "block";
-               })
-               .on("mouseout", function(d){
-                   var tooltipDiv = document.getElementById('tooltip');
-                   tooltipDiv.style.display = "none";
+                   elem.attr("class", "feature-active");
                })
                .on("click", function(d){
+                 //remove active classes from previous countries
+                 var activeCountries = document.getElementsByClassName("feature-active");
+
+                 for(var i = (activeCountries.length - 1); i >= 0; i--)
+                 {
+                   let activeItem = d3.select(activeCountries[i])
+                   activeItem.attr("class", "feature");
+                 }
+                 //
                   var current_position = d3.mouse(this);
                   var tooltipDiv = document.getElementById('tooltip');
                   var percentageText = typeof(d.properties.percentage) == 'undefined' ? '<10%' : d.properties.percentage+'%';
+                  let elem = d3.select(this);
                   tooltipDiv.innerHTML = d.properties.name+' '+percentageText;
-                  tooltipDiv.style.top = current_position[1]+'px';
-                  tooltipDiv.style.left = current_position[0]+'px';
+                  tooltipDiv.style.top = (parseInt(current_position[1]) + 10)+'px';
+                  tooltipDiv.style.left = (parseInt(current_position[0]) - tooltipDiv.offsetWidth - 10)+'px';
                   tooltipDiv.style.display = "block";
-              })
-              .on("click", function(d){
-                  var tooltipDiv = document.getElementById('tooltip');
-                  tooltipDiv.style.display = "none";
+                  elem.attr("class", "feature-active");
               });
         });
 
@@ -158,9 +204,9 @@
                 var origin = [d3.event.translate[0] * -1, d3.event.translate[1]];
 
                 projection.scale(scale);
-                space.scale(scale * 3);
+                space.scale(scale * 1.2);
                 backgroundCircle.attr('r', scale);
-                path.pointRadius(2 * scale / scale0);
+                path.pointRadius(.8 * scale / scale0);
 
                 projection.origin(origin);
                 circle.origin(origin);

@@ -37,7 +37,11 @@ body {
 .feature {
     stroke: #fff;
     stroke-width: .5px;
-    fill: #e91712;
+}
+.feature-active {
+    stroke: #fff;
+    stroke-width: 2px;
+    filter: url(#drop-shadow);
 }
 .globe {
     stroke: rgba(255, 255, 255, .5);
@@ -46,7 +50,7 @@ body {
 .star {
     fill: #fff;
     stroke: rgba(255, 255, 255, .5);
-    stroke-width: .25px;
+    stroke-width: .15px;
 }
 .title {
     color: white;
@@ -57,13 +61,13 @@ body {
     font-size: 15px;
 }
 .link {
-    color: #007dd0 !important;
+    color: #ffffff !important;
     text-decoration: none !important;
 }
 #title {
     margin-top: -20px;
     position: absolute;
-    width: 325px;
+    width: 230px;
     overflow: visible;
     text-align: left;
     color: #010204;
@@ -72,6 +76,7 @@ body {
     background-color: rgba(0, 0, 0, 0);
     margin-left: 25px;
     margin-top: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
 }
 #legend {
     position: absolute;
@@ -131,5 +136,5 @@ body {
 }
 #tooltip {
     border-radius: 5px;
-    padding: 3px;
+    padding: 8px;
 }
